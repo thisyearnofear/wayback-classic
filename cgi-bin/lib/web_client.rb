@@ -19,15 +19,26 @@ require_relative 'error_reporting'
 require_relative 'web_client/cache'
 
 module WaybackClassic
-  class WebClient
-    USER_AGENT = "wayback-classic.nfshost.com/0.1 (wayback@jessicastokes.net) Ruby/#{RUBY_VERSION}"
+  VERSION = "1.0.0"
 
+  class WebClient
     class ForbiddenError < ErrorReporting::ForbiddenError; end
 
     class NotFoundError < ErrorReporting::NotFoundError; end
 
+    private_class_method def self.user_agent
+      http_host = ENV["SERVER_NAME"] || ENV["HTTP_HOST"]
+      webmaster_email = ENV["WEBMASTER_EMAIL"]
+
+      if !http_host or !webmaster_email
+        raise ErrorReporting::ServerError.new("Server error: missing instance details (#{http_host}; #{webmaster_email})")
+      end
+
+      "WaybackClassic/#{WaybackClassic::VERSION} (#{http_host}; #{webmaster_email}) Ruby/#{RUBY_VERSION}"
+    end
+
     def self.open(uri, options = {})
-      options['User-Agent'] = USER_AGENT
+      options['User-Agent'] = user_agent
       Cache.get(uri) || Cache.put(uri, URI.open(uri, options))
     rescue OpenURI::HTTPError => error
       case error.io.status[0]
