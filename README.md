@@ -16,6 +16,19 @@ Wayback Classic attempts to provide a fully-functional frontend for the Wayback 
 
 This is built on both the [CDX API](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) (for retrieving lists of page snapshots), as well as the undocumented `__wb/search` API used by the Wayback Machine's own frontend to handle site search and determine if a site exists in the archive. More info about the site search can be found [in this blog post](http://blog.archive.org/2016/10/24/beta-wayback-machine-now-with-site-search/).
 
+## Hosting Wayback Classic
+
+If you wish to run your own instance, the author has two requests:
+
+1. Please configure your server to set the `WEBMASTER_EMAIL` variable for CGI applications to an email address you can be reached at.  
+   This variable is included in the `User-Agent` string for requests to the Wayback Machine, and I would feel better knowing that other instances provide proper contact information. For Apache you can add use `SetEnv` in a `.htaccess` file.
+2. Please do not display advertising to, or track users using Wayback Classic.
+
+Further, there are some considerations:
+
+- Wayback Classic has a built-in cache mechanism; it will cache responses from the Wayback Machine on-disk with a validity of 24 hours to avoid hammering their servers. You should consider running `bin/cache-clean` periodically to empty this cache, or it will build up.
+- Please do not use `bin/dev-server` (described below) in production. Wayback Classic is a basic CGI application and should be deployed as such.
+
 ## License
 
 Wayback Classic is licensed under the Affero General Public License version 3, or any later version of the AGPL, the text of which can be found in LICENSE.md, unless otherwise noted.
