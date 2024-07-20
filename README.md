@@ -4,7 +4,7 @@
 
 A simple, CGI-based frontend for the Wayback Machine which works on old browsers without modern JavaScript or CSS support
 
-The main instance of Wayback Classic is available at [wayback-classic.net](http://wayback-classic.net). It supports both HTTP and HTTPS.
+Wayback Classic is available at [wayback-classic.net](http://wayback-classic.net). It supports both HTTP and HTTPS.
 
 ## Why
 
@@ -15,6 +15,10 @@ Wayback Classic attempts to provide a fully-functional frontend for the Wayback 
 ## Notes
 
 This is built on both the [CDX API](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) (for retrieving lists of page snapshots), as well as the undocumented `__wb/search` API used by the Wayback Machine's own frontend to handle site search and determine if a site exists in the archive. More info about the site search can be found [in this blog post](http://blog.archive.org/2016/10/24/beta-wayback-machine-now-with-site-search/).
+
+## License
+
+Wayback Classic is licensed under the Affero General Public License version 3, or any later version of the AGPL, the text of which can be found in LICENSE.md, unless otherwise noted.
 
 ## Development
 
