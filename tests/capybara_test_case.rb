@@ -17,6 +17,9 @@ class RackWrapper
   LOADED_MODULES = []
 
   def self.call(env)
+    env["SERVER_NAME"] = "wayback-classic.rake.localhost"
+    env["WEBMASTER_EMAIL"] = "noreply@wayback-classic.rake.localhost"
+
     request = Rack::Request.new(env)
 
     case request.path
