@@ -1,29 +1,308 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="A frontend to search and browse the Wayback Machine from old browsers">
-    <title>Wayback Classic</title>
-    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover and redeem the latest coupons, offers, and events from your favorite vendors."
+    />
+    <title>Coupon DJ</title>
+    <link rel="icon" type="image/png" href="/images/couponDJv2.png" />
+    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
     <script type="text/javascript" src="/scripts/html5in4.js"></script>
   </head>
   <body background="/images/background@0.5x.gif">
-    <h1><a href="/"><img border="0" src="/images/favicon-32.gif" height="32" width="32" alt="" valign="middle"></a> <a href="/">Wayback Classic</a></h1>
-    <form action="/cgi-bin/lookup.cgi" method="get">
-      <label>URL or keywords: <input type="text" name="q"></label>
-      <input type="hidden" name="utf8" value="✓">
-      <input type="submit" value="Look Up">
-      <a href="/search-help.html">Search Help</a>
-    </form>
-    <p>A frontend for the <a href="//web.archive.org">Wayback Machine</a> which works on old browsers</p>
-    <hr>
-    <p><small>Wayback Classic retrieves data from The Wayback Machine. The Wayback Machine is run by the <a href="//archive.org">Internet Archive</a>. They do amazing work preserving all sorts of things, including the websites you find here. You should consider <a href="//archive.org/donate/">donating</a> to them! Copyright &copy; 2021-2024 Jessica Stokes. <a href="https://github.com/ticky/wayback-classic">Source code available on GitHub</a>. &quot;Wayback Classic&quot; icon and button by <a href="http://shadenexus.com/">Gwyndolyn Marchant</a></small></p>
-    <a href="//wayback-classic.net"><img border="0" src="/images/wybk-clsc-btn.gif" alt="Wayback Classic" height="31" width="88"></a> <a href="//web.archive.org/web/19970220020535/http://www.microsoft.com/ie/download/"><img border="0" src="/images/ie.gif" alt="Microsoft Internet Explorer" height="31" width="88"></a>
-    <a href="//web.archive.org/web/19970220020535/http://home.netscape.com/comprod/mirror/client_download.html"><img border="0" src="/images/netscape-now.gif" alt="Netscape Now! 3.0" height="31" width="88"></a>
-    <img border="0" src="/images/dreamcast.gif" alt="Compatible with Dreamcast" height="31" width="88">
-    <a href="//web.archive.org/web/20230325051606if_/http://the-tech.mit.edu/Projects/Macmade/"><img border="0" src="/images/macmade-wht.gif" alt="Made with Macintosh" height="31" width="88"></a>
-    <a href="//validator.w3.org/check?uri=referer"><img border="0" src="/images/valid-html401.gif" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+    <div class="music-player-container">
+      <div class="music-player minimized">
+        <iframe
+          id="musicIframe"
+          src="https://futuretape.xyz/embed/search/sara%20phillips?start=1&autoplay=1"
+          width="100%"
+          height="300"
+          frameborder="0"
+          allow="autoplay; clipboard-write;"
+          loading="lazy"
+          title="music-player">
+        </iframe>
+      </div>
+      <button class="toggle-button">▲</button>
+    </div>
+    <h1>
+      <a href="/"
+        ><img
+          border="0"
+          src="/images/couponDJv2.png"
+          height="32"
+          width="32"
+          alt=""
+          valign="middle"
+      /></a>
+      <a href="/">Coupon DJ</a>
+    </h1>
+
+    <p>A farcaster-native social commerce primitive</p>
+    <hr />
+    <div class="main-content-container">
+      <!-- How It Works Section -->
+      <div class="how-it-works-container">
+        <ul>
+          <li>
+            <b>CO-CREATE</b> <br /><br />decentralized brands empower onchain
+            communities
+            <ul>
+              <li>
+                <img src="/images/higher.png" alt="Higher" class="icon" />
+                iconic integrations
+              </li>
+              <li>
+                <img src="/images/nouns.png" alt="Nouns" class="icon" /> willed
+                into existence
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <div class="flow-diagram">
+              <b>
+                <div>Coupon</div>
+                <div class="arrow">↑</div>
+                <div>Artcoin</div>
+                <div class="arrow">↑</div>
+                <div>NFT</div>
+              </b>
+              <div class="flow-subtitle">idea, token, product</div>
+            </div>
+            <ul>
+              <li>
+                <img
+                  src="/images/degen.png"
+                  alt="Degen"
+                  class="icon icon-custom"
+                />
+                mint brand + product collab design ideas as NFTs
+              </li>
+              <li>
+                <img src="/images/zorb.png" alt="Zorb" class="icon" /> a minimum
+                threshold must be met so they are tokenised
+              </li>
+              <li>
+                <img src="/images/tn100x.png" alt="TN100x" class="icon" /> stake
+                tokens to receive coupons which incentivise production
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <div class="produce-header">
+              <b>PRODUCE</b>
+              <div class="quote">
+                "show me the incentive, i'll show you the outcome"
+              </div>
+            </div>
+            <ul>
+              <li>
+                <img src="/images/moxie.png" alt="Moxie" class="icon" /> own
+                coupons to show demand for custom drops
+              </li>
+              <li>
+                <img src="/images/OP.png" alt="OP" class="icon" /> staked
+                locking window so vendors on the clock to decide
+              </li>
+              <li>
+                <img src="/images/anon.png" alt="Anon" class="icon" /> when
+                coupons committed ≥ vendor minimum, they ship!
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <b>GOVERNANCE</b> <br /><br />
+            <a href="https://dexscreener.com/base/0x1F0DA6227adCbF1BeA7927D733A46a140b776153">$COUPONDJ</a>
+            <ul>
+              <li>
+                <img src="/images/rainbow.png" alt="Rainbow" class="icon" />
+                token ownership to submit NFT for feature
+              </li>
+              <li>
+                <img src="/images/CDJ.png" alt="CDJ" class="icon icon-custom" />
+                token ownership to receive coupons (as the vendor)
+              </li>
+              <li>
+                <img
+                  src="/images/farcasterpixel.png"
+                  alt="Farcaster"
+                  class="icon icon-custom"
+                />
+                token ownership to stake artcoins & receive coupons
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Featured Section -->
+      <section id="featured">
+        <h2>Featured</h2>
+        <p>
+          ⌐◨-◨ mint if you MIGHT buy a community design
+          <br />
+          ⌐◨-◨ stake $couponDJ if you'd DEFINITELY buy it
+          <br />
+          ⌐◨-◨ submit yours! mints ➜ coupons ➜ products
+        </p>
+
+        <div class="featured-item">
+          <img
+            src="/images/chipped.png"
+            alt="Chipped Social Nails"
+            width="88"
+            height="31"
+            class="zoomable"
+          />
+          <p>
+            Press-on
+            <a href="https://chippedsocial.com/?ref=ykcaaulp">CHIPPED</a> tech
+            nails with NFC chips by
+            <a href="https://warpcast.com/winny">Winny.eth</a>
+          </p>
+        </div>
+        <div class="featured-item">
+          <img
+            src="/images/candle.png"
+            alt="Humankind Candles"
+            width="88"
+            height="31"
+            class="zoomable"
+          />
+          <p>
+            Handcrafted
+            <a href="https://humankind.place/">HUMANKIND</a> sustainable luxury
+            candles by
+            <a href="https://warpcast.com/samantha">Samantha</a>
+          </p>
+        </div>
+      
+
+      <!-- NFT Minting Section -->
+      <section id="nft-minting">
+        <div class="minting-container">
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <iframe 
+                  src="https://zora.co/collect/base:0xff241559a2019c54207e0aaa62f02f4c0c7e016d/1/embed?referrer=0x55A5705453Ee82c742274154136Fce8149597058&modal=1" 
+                  style="border:0;background-color:transparent;" 
+                  width="100%" 
+                  height="100%" 
+                  allowtransparency="true" 
+                  allowfullscreen="true" 
+                  sandbox="allow-pointer-lock allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox">
+                </iframe>
+              </div>
+              <div class="slide">
+                <iframe 
+                  src="https://zora.co/collect/base:0xff241559a2019c54207e0aaa62f02f4c0c7e016d/2/embed?referrer=0x55A5705453Ee82c742274154136Fce8149597058&modal=1" 
+                  style="border:0;background-color:transparent;" 
+                  width="100%" 
+                  height="100%" 
+                  allowtransparency="true" 
+                  allowfullscreen="true" 
+                  sandbox="allow-pointer-lock allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox">
+                </iframe>
+              </div>
+            </div>
+            <button class="slider-btn prev">←</button>
+            <button class="slider-btn next">→</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <hr />
+    <h2>About</h2>
+    <p>
+      Coupon DJ was created at Duke over a Saturday morning breakfast in 2007.
+      Its servers ran on Amazon EC2, utilizing Fedora Core 7, Apache,
+      mod_python, hand-coded XHTML & CSS.
+    </p>
+    <p>
+      This COPYPASTA VERSION pays homage to its creator, who with farcaster
+      frames has set the stage for decentralisedcommerce seamlessly
+      enabled via the social graph.
+    </p>
+    <hr />
+    <p>
+      <small
+        >Its the early onchain era. (Not so) wayback it was the early internet
+        era. Fun, experimental, for everyone. <br />
+        Believe in something.
+      </small>
+    </p>
+    <a href="https://web.archive.org/web/20071215075122/http://coupondj.com"
+      ><img
+        border="0"
+        src="/images/coupondjbanner.png"
+        alt="Coupon DJ"
+        height="31"
+        width="88"
+    /></a>
+    <a
+      href="//web.archive.org/web/19970220020535/http://www.microsoft.com/ie/download/"
+    >
+      <img
+        border="0"
+        src="/images/ie.gif"
+        alt="Microsoft Internet Explorer"
+        height="31"
+        width="88"
+      />
+    </a>
+    <a
+      href="//web.archive.org/web/19970220020535/http://home.netscape.com/comprod/mirror/client_download.html"
+    >
+      <img
+        border="0"
+        src="/images/netscape-now.gif"
+        alt="Netscape Now! 3.0"
+        height="31"
+        width="88"
+      />
+    </a>
+    <img
+      border="0"
+      src="/images/dreamcast.gif"
+      alt="Compatible with Dreamcast"
+      height="31"
+      width="88"
+    />
+    <a
+      href="//web.archive.org/web/20230325051606if_/http://the-tech.mit.edu/Projects/Macmade/"
+    >
+      <img
+        border="0"
+        src="/images/macmade-wht.gif"
+        alt="Made with Macintosh"
+        height="31"
+        width="88"
+      />
+    </a>
+    <a href="//validator.w3.org/check?uri=referer">
+      <img
+        border="0"
+        src="/images/valid-html401.gif"
+        alt="Valid HTML 4.01 Transitional"
+        height="31"
+        width="88"
+      />
+    </a>
+    <div id="imageModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img id="modalImage" src="" alt="" />
+    </div>
+    <script src="/scripts/modal.js"></script>
+    <script src="/scripts/player.js"></script>
+    <script src="/scripts/slider.js"></script>
   </body>
 </html>
