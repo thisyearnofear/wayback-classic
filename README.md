@@ -62,8 +62,22 @@ To run the test suite, open a terminal within the `tests` directory, and run `bu
             <a href="https://freedomfactory.io/">Freedom Factory</a>
           </p>
         </div>
-      </section>
 
+
+ <div class="featured-item">
+          <img
+            src="/images/ledger.png"
+            alt="Ledger Hardware Wallet"
+            width="88"
+            height="31"
+            class="zoomable"
+          />
+          <p>
+            <a href="https://shop.ledger.com/?r=26f3d0caf6b6">LEDGER</a>
+            hardware wallet crypto protection by
+            <a href="https://warpcast.com/ledgerofficial">Ledger</a>
+          </p>
+        </div>
 ---
 
 FRAMES V2
