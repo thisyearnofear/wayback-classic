@@ -1,3 +1,5 @@
+# NOTE: This file has been relocated to frontend/public/legacy/robots.txt.
+# The root will soon be replaced by the new React build as part of the social-commerce platform migration.
 User-agent: *
 Disallow: /cgi-bin/
 Disallow: /bin/
@@ -6,3 +8,5 @@ Allow: /images/
 Allow: /styles/
 Allow: /templates/
 Allow: /tests/
+Disallow: /cgi-bin/
+Disallow: /README.md
