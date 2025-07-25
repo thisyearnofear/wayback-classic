@@ -1,0 +1,48 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.yarnrc.yml
+
+# Vite
+dist/
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+
+# Python/agents
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+agents/.env
+
+# Hardhat/onchain
+onchain/cache/
+onchain/artifacts/
+onchain/typechain/
+onchain/coverage/
+onchain/.env
+
+# Logs
+*.log
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
