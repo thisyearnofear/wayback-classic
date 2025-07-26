@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import legacy site styles for full retro effect */
+@import "/styles/style.css";
